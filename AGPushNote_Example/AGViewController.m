@@ -7,6 +7,9 @@
 //
 
 #import "AGViewController.h"
+#import "AGPushNoteView.h"
+
+static NSInteger pushCounter = 0;
 
 @interface AGViewController ()
 
@@ -20,10 +23,16 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)pushNowAction:(UIButton *)sender {
+    [AGPushNoteView showWithNotificationMessage:[NSString stringWithFormat:@"%d", pushCounter++]];
+    [AGPushNoteView setMessageAction:^(NSString *message) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"PUSH"
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Close"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
 }
 
 @end

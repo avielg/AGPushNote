@@ -21,6 +21,8 @@
 		299C5686190F867300C8AECF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 299C5668190F867300C8AECF /* UIKit.framework */; };
 		299C568E190F867300C8AECF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 299C568C190F867300C8AECF /* InfoPlist.strings */; };
 		299C5690190F867300C8AECF /* AGPushNote_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 299C568F190F867300C8AECF /* AGPushNote_ExampleTests.m */; };
+		299C569D190F872600C8AECF /* AGPushNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299C569B190F872600C8AECF /* AGPushNoteView.m */; };
+		299C569E190F872600C8AECF /* AGPushNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299C569C190F872600C8AECF /* AGPushNoteView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		299C568B190F867300C8AECF /* AGPushNote_ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AGPushNote_ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		299C568D190F867300C8AECF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		299C568F190F867300C8AECF /* AGPushNote_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGPushNote_ExampleTests.m; sourceTree = "<group>"; };
+		299C569A190F872600C8AECF /* AGPushNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPushNoteView.h; sourceTree = "<group>"; };
+		299C569B190F872600C8AECF /* AGPushNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPushNoteView.m; sourceTree = "<group>"; };
+		299C569C190F872600C8AECF /* AGPushNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGPushNoteView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +117,10 @@
 		299C566A190F867300C8AECF /* AGPushNote_Example */ = {
 			isa = PBXGroup;
 			children = (
-				299C5673190F867300C8AECF /* AGAppDelegate.h */,
-				299C5674190F867300C8AECF /* AGAppDelegate.m */,
+				299C5699190F870700C8AECF /* PushNote View */,
 				299C5676190F867300C8AECF /* Main.storyboard */,
 				299C5679190F867300C8AECF /* AGViewController.h */,
 				299C567A190F867300C8AECF /* AGViewController.m */,
-				299C567C190F867300C8AECF /* Images.xcassets */,
 				299C566B190F867300C8AECF /* Supporting Files */,
 			);
 			path = AGPushNote_Example;
@@ -126,6 +129,9 @@
 		299C566B190F867300C8AECF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				299C5673190F867300C8AECF /* AGAppDelegate.h */,
+				299C5674190F867300C8AECF /* AGAppDelegate.m */,
+				299C567C190F867300C8AECF /* Images.xcassets */,
 				299C566C190F867300C8AECF /* AGPushNote_Example-Info.plist */,
 				299C566D190F867300C8AECF /* InfoPlist.strings */,
 				299C5670190F867300C8AECF /* main.m */,
@@ -150,6 +156,16 @@
 				299C568C190F867300C8AECF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		299C5699190F870700C8AECF /* PushNote View */ = {
+			isa = PBXGroup;
+			children = (
+				299C569A190F872600C8AECF /* AGPushNoteView.h */,
+				299C569B190F872600C8AECF /* AGPushNoteView.m */,
+				299C569C190F872600C8AECF /* AGPushNoteView.xib */,
+			);
+			name = "PushNote View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299C569E190F872600C8AECF /* AGPushNoteView.xib in Resources */,
 				299C567D190F867300C8AECF /* Images.xcassets in Resources */,
 				299C566F190F867300C8AECF /* InfoPlist.strings in Resources */,
 				299C5678190F867300C8AECF /* Main.storyboard in Resources */,
@@ -250,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299C569D190F872600C8AECF /* AGPushNoteView.m in Sources */,
 				299C5675190F867300C8AECF /* AGAppDelegate.m in Sources */,
 				299C567B190F867300C8AECF /* AGViewController.m in Sources */,
 				299C5671190F867300C8AECF /* main.m in Sources */,
@@ -380,6 +398,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGPushNote_Example/AGPushNote_Example-Prefix.pch";
 				INFOPLIST_FILE = "AGPushNote_Example/AGPushNote_Example-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,6 +412,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGPushNote_Example/AGPushNote_Example-Prefix.pch";
 				INFOPLIST_FILE = "AGPushNote_Example/AGPushNote_Example-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
