@@ -5,7 +5,7 @@ Custom view for easily displaying in-app push notification that feels like defau
 
 <img src="https://github.com/avielg/AGPushNote/blob/master/Resources/push_ex.png?raw=true" height="50%">
 
-* Will look liks iOS7 on iOS7 and will (try to) look like iOS6 on iOS6.
+* Will look like iOS7 on iOS7 and will (try to) look like iOS6 on iOS6.
 * Both block and protocol ways are available to control the action of tapping the message and showing/dismissing the view.
 * Automatic handling for more than 1 push - Try calling `showWithNotificationMessage:` repeatedly to see how this works (Shown in the example app).
 * Action block for tapping the message can be changed at any time - even after the view is already on screen! (Use `setMessageAction:` to set it). 
