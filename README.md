@@ -53,6 +53,11 @@ The default 5 seconds delay is set in a define in the head of the `.m` file:
 @interface AGPushNoteView() ...
 ```
 
+## Things to see, stuff to do, places to go
+* Add cool parallax effect to the iOS7 view (Supposed to be easy, less easy when subclassing `UIToolbar` instead `UIView`...).
+* Add option to put small icon next to the message.
+* Add option to switch the X button to the right side.
+
 ## Credits
 
 AGNoteView was created by [Aviel Gross](http://bit.ly/aviel) in the development of [TLV Airport](https://itunes.apple.com/us/app/tel-aviv-int-airport-nml-t/id796888961?mt=8)
