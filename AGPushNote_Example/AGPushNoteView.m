@@ -55,6 +55,10 @@ static AGPushNoteView *_sharedPushView;
 	return nil;
 }
 
++ (void)setDelegateForPushNote:(id<AGPushNoteViewDelegate>)delegate {
+    [PUSH_VIEW setPushNoteDelegate:delegate];
+}
+
 #pragma mark - Lifecycle (of sort)
 - (id)initWithFrame:(CGRect)frame
 {
