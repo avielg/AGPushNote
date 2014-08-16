@@ -11,8 +11,8 @@
 @optional
 - (void)pushNoteDidAppear; // Called after the view has been fully transitioned onto the screen. (equel to completion block).
 - (void)pushNoteWillDisappear; // Called before the view is hidden, after the message action block.
-
 @end
+
 @interface AGPushNoteView : UIToolbar
 + (void)showWithNotificationMessage:(NSString *)message;
 + (void)showWithNotificationMessage:(NSString *)message completion:(void (^)(void))completion;
@@ -21,6 +21,7 @@
 + (void)awake;
 
 + (void)setMessageAction:(void (^)(NSString *message))action;
++ (void)setDelegateForPushNote:(id<AGPushNoteViewDelegate>)delegate;
 
 @property (nonatomic, weak) id<AGPushNoteViewDelegate> pushNoteDelegate;
 @end

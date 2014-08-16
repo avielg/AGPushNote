@@ -55,6 +55,10 @@ static AGPushNoteView *_sharedPushView;
 	return nil;
 }
 
++ (void)setDelegateForPushNote:(id<AGPushNoteViewDelegate>)delegate {
+    [PUSH_VIEW setPushNoteDelegate:delegate];
+}
+
 #pragma mark - Lifecycle (of sort)
 - (id)initWithFrame:(CGRect)frame
 {
@@ -143,7 +147,7 @@ static AGPushNoteView *_sharedPushView;
         }];
         
         //Start timer (Currently not used to make sure user see & read the push...)
-//        PUSH_VIEW.closeTimer = [NSTimer scheduledTimerWithTimeInterval:CLOSE_PUSH_SEC target:[AGPushNoteView class] selector:@selector(close) userInfo:nil repeats:NO];
+//        PUSH_VIEW.closeTimer = [NSTimer scheduledTimerWithTimeInterval:CLOSE_PUSH_SEC target:[IAAPushNoteView class] selector:@selector(close) userInfo:nil repeats:NO];
     }
 }
 + (void)closeWitCompletion:(void (^)(void))completion {
